@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/taerikor.github.io/movie_app_2020/static/css/main.463a3e09.chunk.css",
+    "main.js": "/taerikor.github.io/movie_app_2020/static/js/main.30fe9c4b.chunk.js",
+    "main.js.map": "/taerikor.github.io/movie_app_2020/static/js/main.30fe9c4b.chunk.js.map",
+    "runtime-main.js": "/taerikor.github.io/movie_app_2020/static/js/runtime-main.ca030d9f.js",
+    "runtime-main.js.map": "/taerikor.github.io/movie_app_2020/static/js/runtime-main.ca030d9f.js.map",
+    "static/js/2.55c436f3.chunk.js": "/taerikor.github.io/movie_app_2020/static/js/2.55c436f3.chunk.js",
+    "static/js/2.55c436f3.chunk.js.map": "/taerikor.github.io/movie_app_2020/static/js/2.55c436f3.chunk.js.map",
+    "index.html": "/taerikor.github.io/movie_app_2020/index.html",
+    "static/css/main.463a3e09.chunk.css.map": "/taerikor.github.io/movie_app_2020/static/css/main.463a3e09.chunk.css.map",
+    "static/js/2.55c436f3.chunk.js.LICENSE.txt": "/taerikor.github.io/movie_app_2020/static/js/2.55c436f3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ca030d9f.js",
+    "static/js/2.55c436f3.chunk.js",
+    "static/css/main.463a3e09.chunk.css",
+    "static/js/main.30fe9c4b.chunk.js"
+  ]
+}
