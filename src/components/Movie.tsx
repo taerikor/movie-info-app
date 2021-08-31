@@ -1,9 +1,18 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "./Movie.css";
 import { Link } from 'react-router-dom';
 
-function hour(n){
+interface IMovie {
+  id?: number;
+  year: string;
+  title: string;
+  summary: string;
+  poster: string;
+  genres: string[];
+  runtime: number;
+}
+
+function hour(n:number){
   var num = n;
   var hours = (num / 60);
   var rhours = Math.floor(hours);
@@ -12,7 +21,7 @@ function hour(n){
   return (rhours < 1 ? `${rminutes} m`:`${rhours} h ${rminutes} m`);
   }
 
-function Movie({ year, title, summary, poster, genres, runtime }) {
+function Movie({ year, title, summary, poster, genres, runtime }:IMovie) {
   return (
     <Link to={{
         pathname: '/movie-detail',
@@ -45,14 +54,5 @@ function Movie({ year, title, summary, poster, genres, runtime }) {
      </Link>
   );
 }
-
-Movie.propTypes = {
-  id: PropTypes.number.isRequired,
-  year: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
-  summary: PropTypes.string.isRequired,
-  poster: PropTypes.string.isRequired,
-  genres: PropTypes.arrayOf(PropTypes.string).isRequired
-};
 
 export default Movie;

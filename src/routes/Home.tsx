@@ -3,6 +3,17 @@ import axios from "axios";
 import Movie from "../components/Movie";
 import "./Home.css";
 
+interface IHome {
+  id?: number;
+  year: string;
+  title: string;
+  summary: string;
+  medium_cover_image: string;
+  genres: string[];
+  runtime: number;
+}
+
+
 class Home extends React.Component {
   state = {
     isLoading: true,
@@ -20,7 +31,6 @@ class Home extends React.Component {
   };
   componentDidMount() {
     this.getMovies();
-    console.log({movies.runtime})
   }
   render() {
     const { isLoading, movies } = this.state;
@@ -32,7 +42,7 @@ class Home extends React.Component {
           </div>
         ) : (
           <div className="movies">
-            {movies.map(movie => (
+            {movies.map((movie:IHome) => (
               <Movie
                 key={movie.id}
                 id={movie.id}
