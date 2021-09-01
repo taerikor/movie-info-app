@@ -2,7 +2,7 @@ import React from "react";
 import "./Movie.css";
 import { Link } from 'react-router-dom';
 
-interface IMovie {
+interface MoveProps {
   id?: number;
   year: string;
   title: string;
@@ -21,7 +21,7 @@ function hour(n:number){
   return (rhours < 1 ? `${rminutes} m`:`${rhours} h ${rminutes} m`);
   }
 
-function Movie({ year, title, summary, poster, genres, runtime }:IMovie) {
+function Movie({ year, title, summary, poster, genres, runtime }:MoveProps) {
   return (
     <Link to={{
         pathname: '/movie-detail',

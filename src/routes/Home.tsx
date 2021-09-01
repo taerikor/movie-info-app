@@ -3,7 +3,7 @@ import axios from "axios";
 import Movie from "../components/Movie";
 import "./Home.css";
 
-interface IHome {
+export interface HomeProps {
   id?: number;
   year: string;
   title: string;
@@ -13,12 +13,21 @@ interface IHome {
   runtime: number;
 }
 
+interface HomeState {
+  isLoading: boolean;
+  movies: Array<HomeProps>
+}
 
-class Home extends React.Component {
-  state = {
-    isLoading: true,
-    movies: []
-  };
+
+class Home extends React.Component<HomeProps,HomeState> {
+  constructor(props:any){
+    super(props);
+    
+    this.state = {
+      isLoading: true,
+      movies: []
+    };
+  }
   getMovies = async () => {
     const {
       data: {
@@ -32,7 +41,7 @@ class Home extends React.Component {
   componentDidMount() {
     this.getMovies();
   }
-  render() {
+  render():JSX.Element {
     const { isLoading, movies } = this.state;
     return (
       <section className="container">
@@ -42,7 +51,7 @@ class Home extends React.Component {
           </div>
         ) : (
           <div className="movies">
-            {movies.map((movie:IHome) => (
+            {movies.map((movie) => (
               <Movie
                 key={movie.id}
                 id={movie.id}
