@@ -12,7 +12,7 @@ interface MoveProps {
   runtime: number;
 }
 
-function hour(n:number){
+function hour(n:number):string {
   var num = n;
   var hours = (num / 60);
   var rhours = Math.floor(hours);
@@ -21,7 +21,7 @@ function hour(n:number){
   return (rhours < 1 ? `${rminutes} m`:`${rhours} h ${rminutes} m`);
   }
 
-function Movie({ year, title, summary, poster, genres, runtime }:MoveProps) {
+function Movie({ year, title, summary, poster, genres, runtime }:MoveProps):JSX.Element {
   return (
     <Link to={{
         pathname: '/movie-detail',
